@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mira's Little World ♡</title>
+    <meta name="description" content="A tiny pastel corner of Mira's world.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="background-decor">
+        <span class="star star1">✧</span>
+        <span class="star star2">♡</span>
+        <span class="star star3">✦</span>
+        <span class="star star4">୨୧</span>
+    </div>
+
+    <header class="navbar">
+        <a href="#" class="logo">mira<span>♡</span></a>
+
+        <button id="theme-toggle" class="theme-button">
+            <span id="theme-icon">☾</span>
+            <span id="theme-text">Dark mode</span>
+        </button>
+    </header>
+
+    <main class="container">
+
+        <!-- PROFILE -->
+        <section class="card profile-card">
+
+            <div class="status">
+                <span class="status-dot"></span>
+                somewhere in my own little world
+            </div>
+
+            <div class="avatar-container">
+                <img
+                    src="img/p5.jpg"
+                    alt="Mira's profile picture"
+                    class="avatar"
+                    onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='grid';"
+                >
+
+                <div id="avatar-fallback" class="avatar-fallback">
+                    ♡
+                </div>
+
+                <span class="avatar-decoration">✧</span>
+            </div>
+
+            <p class="small-heading">WELCOME TO MY LITTLE CORNER</p>
+
+            <h1>Mira <span class="pink">♡</span></h1>
+
+            <p class="subtitle">
+                Electrical Engineering Student · Aspiring Developer
+            </p>
+
+            <p class="bio">
+                A lover of books, flowers, and the little stories hidden in both.I find joy in learning about the world, meeting new people, and discovering the beauty in things I never knew existed. Always curious, always collecting little pieces of life.
+            </p>
+
+            <div class="tags">
+                <span># programming</span>
+                <span># books</span>
+                <span># music</span>
+                <span># daydreaming</span>
+            </div>
+
+            <!-- SOCIAL LINKS -->
+            <div class="social-links">
+
+                <a href="https://github.com/fatemeowi"
+                   target="_blank" rel="noopener noreferrer"
+                   class="social-link github">
+                    <span>⌘</span> GitHub <b>↗</b>
+                </a>
+
+                <a href="https://www.linkedin.com/in/fatemeh-ashtari"
+                   target="_blank" rel="noopener noreferrer"
+                   class="social-link linkedin">
+                    <span>in</span> LinkedIn <b>↗</b>
+                </a>
+
+                <a href="https://www.instagram.com/gir1inblue/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="social-link instagram">
+                    <span>◎</span> Instagram <b>↗</b>
+                </a>
+
+                <a href="https://t.me/whycantisleep"
+                   target="_blank" rel="noopener noreferrer"
+                   class="social-link telegram">
+                    <span>➤</span> Telegram <b>↗</b>
+                </a>
+
+                <a href="tel:+989911148343"
+                   class="social-link phone">
+                    <span>♡</span> Call me
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- MUSIC PLAYLIST -->
+        <section class="card section-card">
+
+            <div class="section-title">
+                <div>
+                    <p class="small-heading">SONGS I LOVE</p>
+                    <h2>My little playlist <span class="pink">♫</span></h2>
+                </div>
+
+                <div class="title-icon">♪</div>
+            </div>
+
+            <p class="description">
+                A few songs that feel like little pieces of me.
+            </p>
+
+            <div id="playlist" class="playlist"></div>
+
+            <p class="hint">
+                ♡ My favorite songs.
+            </p>
+
+        </section>
+
+
+        <!-- GUESTBOOK -->
+        <section class="card section-card">
+
+            <div class="section-title">
+                <div>
+                    <p class="small-heading">A LITTLE MESSAGE FOR ME</p>
+                    <h2>Leave me a note <span class="pink">♡</span></h2>
+                </div>
+
+                <div class="title-icon">✎</div>
+            </div>
+
+            <p class="description">
+                If you'd like, write me something.
+                A little thought, a kind message, or just a hello.
+            </p>
+
+            <form id="comment-form">
+
+                <label for="name">Your name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="What should I call you?"
+                    maxlength="40"
+                    required
+                >
+
+                <label for="message">Your message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="Write something lovely..."
+                    required
+                ></textarea>
+
+                <div class="form-footer">
+                    <span id="char-count">0 / 500</span>
+
+                    <button type="submit" class="submit-button">
+                        Send a little love ♡
+                    </button>
+                </div>
+
+                <p id="feedback" class="feedback" aria-live="polite"></p>
+
+            </form>
+
+            <div class="comments-heading">
+                <h3>Little notes <span id="comment-count">0</span></h3>
+                <span>✧</span>
+            </div>
+
+            <div id="comments-list" class="comments-list"></div>
+
+           
+
+        </section>
+
+        <footer>
+            <p>Made with code, music & a little bit of magic ♡</p>
+            <a href="#" aria-label="Back to top">↑</a>
+        </footer>
+
+    </main>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
